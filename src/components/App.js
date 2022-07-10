@@ -35,6 +35,14 @@ class App extends Component {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
+  this.newlist=this.cityList.filter(el=>
+      {
+        if(el.country==="India")
+        {
+          return el;
+        }
+      })
+ 
   }
 
   render() {
@@ -42,7 +50,7 @@ class App extends Component {
       <div id="main">
 		<ol>
 			{
-      this.cityList.map((el,index)=><li key={`location${index+1}`}>{el.country==='India'?el.name:null}</li>)
+      this.newlist.map((el,index)=><li key={`location${index+1}`}>{el.name}</li>)
       }
 			</ol>
       </div>

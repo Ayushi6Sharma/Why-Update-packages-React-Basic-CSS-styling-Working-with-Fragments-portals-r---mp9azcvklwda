@@ -42,7 +42,7 @@ class App extends Component {
       <div id="main">
 		<ol>
 			{
-      this.cityList.map((el,index)=><li key={`location${index+1}`}>{el.name}</li>)
+      this.cityList.map((el,index)=><li key={`location${index+1}`}>el.country===India?el.name:null</li>)
       }
 			</ol>
       </div>
